@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>City List</title>
+</head>
+<body>
+<div align="center">
+    <h1>CITY LIST</h1>
+</div>
+<table align="center" style="border: black solid">
+    <tr>
+        <td>#</td>
+        <td>City</td>
+        <td>Quoc Gia</td>
+        <td></td>
+    </tr>
+    <tr th:each="city : ${cityList}">
+        <td th:text="${city.getId()}"></td>
+        <td th:text="${city.getName()}"></td>
+        <td th:text="${city.getCountryName()}"></td>
+        <td><a th:href="@{/view/{id}(id=${city.getId()})}">View</a>|<a th:href="@{/edit/{id}(id=${city.getId()})}">Edit</a>|<a th:href="@{/delete/{id}(id=${city.getId()})}">Delete</a></td>
+    </tr>
+</table>
+</body>
+</html>

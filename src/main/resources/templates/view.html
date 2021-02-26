@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View</title>
+</head>
+<body>
+<div align="center">
+    <h1>CITY</h1>
+</div>
+<table align="center">
+ <tr th:inline="text">thanh pho : [[${city.getName()}]]</tr>
+    <br>
+ <tr th:inline="text">Quoc gia : [[${city.getCountryName()}]]</tr>
+    <br>
+ <tr th:inline="text">dien tich : [[${city.getSquare()}]]</tr>
+    <br>
+ <tr th:inline="text">dan so : [[${city.getPopulation()}]]</tr>
+    <br>
+ <tr th:inline="text">gdp : [[${city.getGDP()}]]</tr>
+    <tr></tr>
+ <tr th:inline="text">gioi thieu : [[${city.getDesciption()}]]</tr>
+    <br>
+</table>
+</body>
+</html>

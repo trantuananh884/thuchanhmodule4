@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<form method="post" th:action="@{/edit/{id}(id=${city.getId()})}" th:object="${city}">
+    <input type="text" hidden th:value="${city.id}">
+    <input type="text" th:value="${city.name}">
+    <input type="text" th:value="${city.square}">
+    <input type="text" th:value="${city.population}">
+    <input type="text" th:value="${city.GDP}">
+    <input type="text" th:value="${city.desciption}">
+    <input type="text" name="countryname" th:value="${city.getCountryName()}">
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
